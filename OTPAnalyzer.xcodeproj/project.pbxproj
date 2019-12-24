@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59DCB63223B26B8A00F36EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DCB63123B26B8A00F36EDB /* AppDelegate.swift */; };
+		59DCB63423B26B8A00F36EDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DCB63323B26B8A00F36EDB /* ViewController.swift */; };
+		59DCB63623B26B8C00F36EDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59DCB63523B26B8C00F36EDB /* Assets.xcassets */; };
+		59DCB63923B26B8C00F36EDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59DCB63723B26B8C00F36EDB /* Main.storyboard */; };
+		59DCB64523B26B8C00F36EDB /* OTPAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DCB64423B26B8C00F36EDB /* OTPAnalyzerTests.swift */; };
+		59DCB65023B26B8D00F36EDB /* OTPAnalyzerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DCB64F23B26B8D00F36EDB /* OTPAnalyzerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59DCB64123B26B8C00F36EDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59DCB62623B26B8A00F36EDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59DCB62D23B26B8A00F36EDB;
+			remoteInfo = OTPAnalyzer;
+		};
+		59DCB64C23B26B8D00F36EDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59DCB62623B26B8A00F36EDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59DCB62D23B26B8A00F36EDB;
+			remoteInfo = OTPAnalyzer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		59DCB62E23B26B8A00F36EDB /* OTPAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTPAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59DCB63123B26B8A00F36EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		59DCB63323B26B8A00F36EDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59DCB63523B26B8C00F36EDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59DCB63823B26B8C00F36EDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		59DCB63A23B26B8C00F36EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59DCB63B23B26B8C00F36EDB /* OTPAnalyzer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OTPAnalyzer.entitlements; sourceTree = "<group>"; };
+		59DCB64023B26B8C00F36EDB /* OTPAnalyzerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OTPAnalyzerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59DCB64423B26B8C00F36EDB /* OTPAnalyzerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPAnalyzerTests.swift; sourceTree = "<group>"; };
+		59DCB64623B26B8D00F36EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59DCB64B23B26B8D00F36EDB /* OTPAnalyzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OTPAnalyzerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59DCB64F23B26B8D00F36EDB /* OTPAnalyzerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPAnalyzerUITests.swift; sourceTree = "<group>"; };
+		59DCB65123B26B8D00F36EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59DCB62B23B26B8A00F36EDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59DCB63D23B26B8C00F36EDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59DCB64823B26B8D00F36EDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59DCB62523B26B8A00F36EDB = {
+			isa = PBXGroup;
+			children = (
+				59DCB63023B26B8A00F36EDB /* OTPAnalyzer */,
+				59DCB64323B26B8C00F36EDB /* OTPAnalyzerTests */,
+				59DCB64E23B26B8D00F36EDB /* OTPAnalyzerUITests */,
+				59DCB62F23B26B8A00F36EDB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59DCB62F23B26B8A00F36EDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59DCB62E23B26B8A00F36EDB /* OTPAnalyzer.app */,
+				59DCB64023B26B8C00F36EDB /* OTPAnalyzerTests.xctest */,
+				59DCB64B23B26B8D00F36EDB /* OTPAnalyzerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59DCB63023B26B8A00F36EDB /* OTPAnalyzer */ = {
+			isa = PBXGroup;
+			children = (
+				59DCB63123B26B8A00F36EDB /* AppDelegate.swift */,
+				59DCB63323B26B8A00F36EDB /* ViewController.swift */,
+				59DCB63523B26B8C00F36EDB /* Assets.xcassets */,
+				59DCB63723B26B8C00F36EDB /* Main.storyboard */,
+				59DCB63A23B26B8C00F36EDB /* Info.plist */,
+				59DCB63B23B26B8C00F36EDB /* OTPAnalyzer.entitlements */,
+			);
+			path = OTPAnalyzer;
+			sourceTree = "<group>";
+		};
+		59DCB64323B26B8C00F36EDB /* OTPAnalyzerTests */ = {
+			isa = PBXGroup;
+			children = (
+				59DCB64423B26B8C00F36EDB /* OTPAnalyzerTests.swift */,
+				59DCB64623B26B8D00F36EDB /* Info.plist */,
+			);
+			path = OTPAnalyzerTests;
+			sourceTree = "<group>";
+		};
+		59DCB64E23B26B8D00F36EDB /* OTPAnalyzerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				59DCB64F23B26B8D00F36EDB /* OTPAnalyzerUITests.swift */,
+				59DCB65123B26B8D00F36EDB /* Info.plist */,
+			);
+			path = OTPAnalyzerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59DCB62D23B26B8A00F36EDB /* OTPAnalyzer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59DCB65423B26B8D00F36EDB /* Build configuration list for PBXNativeTarget "OTPAnalyzer" */;
+			buildPhases = (
+				59DCB62A23B26B8A00F36EDB /* Sources */,
+				59DCB62B23B26B8A00F36EDB /* Frameworks */,
+				59DCB62C23B26B8A00F36EDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OTPAnalyzer;
+			productName = OTPAnalyzer;
+			productReference = 59DCB62E23B26B8A00F36EDB /* OTPAnalyzer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		59DCB63F23B26B8C00F36EDB /* OTPAnalyzerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59DCB65723B26B8D00F36EDB /* Build configuration list for PBXNativeTarget "OTPAnalyzerTests" */;
+			buildPhases = (
+				59DCB63C23B26B8C00F36EDB /* Sources */,
+				59DCB63D23B26B8C00F36EDB /* Frameworks */,
+				59DCB63E23B26B8C00F36EDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59DCB64223B26B8C00F36EDB /* PBXTargetDependency */,
+			);
+			name = OTPAnalyzerTests;
+			productName = OTPAnalyzerTests;
+			productReference = 59DCB64023B26B8C00F36EDB /* OTPAnalyzerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		59DCB64A23B26B8D00F36EDB /* OTPAnalyzerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59DCB65A23B26B8D00F36EDB /* Build configuration list for PBXNativeTarget "OTPAnalyzerUITests" */;
+			buildPhases = (
+				59DCB64723B26B8D00F36EDB /* Sources */,
+				59DCB64823B26B8D00F36EDB /* Frameworks */,
+				59DCB64923B26B8D00F36EDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59DCB64D23B26B8D00F36EDB /* PBXTargetDependency */,
+			);
+			name = OTPAnalyzerUITests;
+			productName = OTPAnalyzerUITests;
+			productReference = 59DCB64B23B26B8D00F36EDB /* OTPAnalyzerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59DCB62623B26B8A00F36EDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Daniel Murfin";
+				TargetAttributes = {
+					59DCB62D23B26B8A00F36EDB = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					59DCB63F23B26B8C00F36EDB = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 59DCB62D23B26B8A00F36EDB;
+					};
+					59DCB64A23B26B8D00F36EDB = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 59DCB62D23B26B8A00F36EDB;
+					};
+				};
+			};
+			buildConfigurationList = 59DCB62923B26B8A00F36EDB /* Build configuration list for PBXProject "OTPAnalyzer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59DCB62523B26B8A00F36EDB;
+			productRefGroup = 59DCB62F23B26B8A00F36EDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59DCB62D23B26B8A00F36EDB /* OTPAnalyzer */,
+				59DCB63F23B26B8C00F36EDB /* OTPAnalyzerTests */,
+				59DCB64A23B26B8D00F36EDB /* OTPAnalyzerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59DCB62C23B26B8A00F36EDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59DCB63623B26B8C00F36EDB /* Assets.xcassets in Resources */,
+				59DCB63923B26B8C00F36EDB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59DCB63E23B26B8C00F36EDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59DCB64923B26B8D00F36EDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59DCB62A23B26B8A00F36EDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59DCB63423B26B8A00F36EDB /* ViewController.swift in Sources */,
+				59DCB63223B26B8A00F36EDB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59DCB63C23B26B8C00F36EDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59DCB64523B26B8C00F36EDB /* OTPAnalyzerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59DCB64723B26B8D00F36EDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59DCB65023B26B8D00F36EDB /* OTPAnalyzerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59DCB64223B26B8C00F36EDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59DCB62D23B26B8A00F36EDB /* OTPAnalyzer */;
+			targetProxy = 59DCB64123B26B8C00F36EDB /* PBXContainerItemProxy */;
+		};
+		59DCB64D23B26B8D00F36EDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59DCB62D23B26B8A00F36EDB /* OTPAnalyzer */;
+			targetProxy = 59DCB64C23B26B8D00F36EDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		59DCB63723B26B8C00F36EDB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59DCB63823B26B8C00F36EDB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59DCB65223B26B8D00F36EDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59DCB65323B26B8D00F36EDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		59DCB65523B26B8D00F36EDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OTPAnalyzer/OTPAnalyzer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 397VYP6USE;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = OTPAnalyzer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielmurfin.OTPAnalyzer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		59DCB65623B26B8D00F36EDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OTPAnalyzer/OTPAnalyzer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 397VYP6USE;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = OTPAnalyzer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielmurfin.OTPAnalyzer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		59DCB65823B26B8D00F36EDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 397VYP6USE;
+				INFOPLIST_FILE = OTPAnalyzerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielmurfin.OTPAnalyzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTPAnalyzer.app/Contents/MacOS/OTPAnalyzer";
+			};
+			name = Debug;
+		};
+		59DCB65923B26B8D00F36EDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 397VYP6USE;
+				INFOPLIST_FILE = OTPAnalyzerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielmurfin.OTPAnalyzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTPAnalyzer.app/Contents/MacOS/OTPAnalyzer";
+			};
+			name = Release;
+		};
+		59DCB65B23B26B8D00F36EDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 397VYP6USE;
+				INFOPLIST_FILE = OTPAnalyzerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielmurfin.OTPAnalyzerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = OTPAnalyzer;
+			};
+			name = Debug;
+		};
+		59DCB65C23B26B8D00F36EDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 397VYP6USE;
+				INFOPLIST_FILE = OTPAnalyzerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielmurfin.OTPAnalyzerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = OTPAnalyzer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59DCB62923B26B8A00F36EDB /* Build configuration list for PBXProject "OTPAnalyzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59DCB65223B26B8D00F36EDB /* Debug */,
+				59DCB65323B26B8D00F36EDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59DCB65423B26B8D00F36EDB /* Build configuration list for PBXNativeTarget "OTPAnalyzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59DCB65523B26B8D00F36EDB /* Debug */,
+				59DCB65623B26B8D00F36EDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59DCB65723B26B8D00F36EDB /* Build configuration list for PBXNativeTarget "OTPAnalyzerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59DCB65823B26B8D00F36EDB /* Debug */,
+				59DCB65923B26B8D00F36EDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59DCB65A23B26B8D00F36EDB /* Build configuration list for PBXNativeTarget "OTPAnalyzerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59DCB65B23B26B8D00F36EDB /* Debug */,
+				59DCB65C23B26B8D00F36EDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59DCB62623B26B8A00F36EDB /* Project object */;
+}
