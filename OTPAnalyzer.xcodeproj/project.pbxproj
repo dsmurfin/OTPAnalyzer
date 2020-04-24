@@ -3,16 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5934A0CD24439365001EA9F4 /* ProducerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934A0CC24439365001EA9F4 /* ProducerModel.swift */; };
+		5934A0CF24439689001EA9F4 /* ConsumerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934A0CE24439689001EA9F4 /* ConsumerModel.swift */; };
+		5934A0D124439E69001EA9F4 /* AddPointController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934A0D024439E69001EA9F4 /* AddPointController.swift */; };
+		593DFF7C2440655B00C5867E /* ShortTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593DFF7B2440655B00C5867E /* ShortTitleCell.swift */; };
+		593DFF7F2440AE9B00C5867E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593DFF7E2440AE9B00C5867E /* Log.swift */; };
+		593DFF8124421EAC00C5867E /* ConsumerSystemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593DFF8024421EAC00C5867E /* ConsumerSystemsController.swift */; };
+		5947C293244321CA0017F6A2 /* ProducerPointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947C291244321CA0017F6A2 /* ProducerPointItem.swift */; };
+		5947C294244321CA0017F6A2 /* ProducerPointItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5947C292244321CA0017F6A2 /* ProducerPointItem.xib */; };
+		596EC94424479797000DFC3F /* ConsumerPointItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 596EC94224479797000DFC3F /* ConsumerPointItem.xib */; };
+		596EC9462447C3B0000DFC3F /* ConsumerPointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596EC9452447C3B0000DFC3F /* ConsumerPointItem.swift */; };
+		59A91F6A23F356250077EA82 /* ProducerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A91F6923F356250077EA82 /* ProducerController.swift */; };
+		59A91F6C23F3563A0077EA82 /* ConsumerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A91F6B23F3563A0077EA82 /* ConsumerController.swift */; };
+		59A91F6E23F3566B0077EA82 /* LauncherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A91F6D23F3566B0077EA82 /* LauncherController.swift */; };
+		59DC385424530F3700C41FDF /* OTPKit in Frameworks */ = {isa = PBXBuildFile; productRef = 59DC385324530F3700C41FDF /* OTPKit */; };
 		59DCB63223B26B8A00F36EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DCB63123B26B8A00F36EDB /* AppDelegate.swift */; };
-		59DCB63423B26B8A00F36EDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DCB63323B26B8A00F36EDB /* ViewController.swift */; };
 		59DCB63623B26B8C00F36EDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59DCB63523B26B8C00F36EDB /* Assets.xcassets */; };
 		59DCB63923B26B8C00F36EDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59DCB63723B26B8C00F36EDB /* Main.storyboard */; };
 		59DCB64523B26B8C00F36EDB /* OTPAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DCB64423B26B8C00F36EDB /* OTPAnalyzerTests.swift */; };
 		59DCB65023B26B8D00F36EDB /* OTPAnalyzerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DCB64F23B26B8D00F36EDB /* OTPAnalyzerUITests.swift */; };
+		59EA975723F963480046AD06 /* NetUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 59EA975623F963480046AD06 /* NetUtils */; };
+		59EA975923F9793D0046AD06 /* CheckCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA975823F9793D0046AD06 /* CheckCellView.swift */; };
+		59FBCC9C24507C6C00E586EC /* FadeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FBCC9B24507C6C00E586EC /* FadeEngine.swift */; };
+		59FBCC9E24507D8400E586EC /* Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FBCC9D24507D8400E586EC /* Fade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +50,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5934A0CC24439365001EA9F4 /* ProducerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducerModel.swift; sourceTree = "<group>"; };
+		5934A0CE24439689001EA9F4 /* ConsumerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumerModel.swift; sourceTree = "<group>"; };
+		5934A0D024439E69001EA9F4 /* AddPointController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPointController.swift; sourceTree = "<group>"; };
+		593DFF7B2440655B00C5867E /* ShortTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortTitleCell.swift; sourceTree = "<group>"; };
+		593DFF7E2440AE9B00C5867E /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		593DFF8024421EAC00C5867E /* ConsumerSystemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumerSystemsController.swift; sourceTree = "<group>"; };
+		5947C291244321CA0017F6A2 /* ProducerPointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducerPointItem.swift; sourceTree = "<group>"; };
+		5947C292244321CA0017F6A2 /* ProducerPointItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProducerPointItem.xib; sourceTree = "<group>"; };
+		596EC94224479797000DFC3F /* ConsumerPointItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsumerPointItem.xib; sourceTree = "<group>"; };
+		596EC9452447C3B0000DFC3F /* ConsumerPointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumerPointItem.swift; sourceTree = "<group>"; };
+		59A91F6923F356250077EA82 /* ProducerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducerController.swift; sourceTree = "<group>"; };
+		59A91F6B23F3563A0077EA82 /* ConsumerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumerController.swift; sourceTree = "<group>"; };
+		59A91F6D23F3566B0077EA82 /* LauncherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherController.swift; sourceTree = "<group>"; };
 		59DCB62E23B26B8A00F36EDB /* OTPAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTPAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59DCB63123B26B8A00F36EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		59DCB63323B26B8A00F36EDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		59DCB63523B26B8C00F36EDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59DCB63823B26B8C00F36EDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59DCB63A23B26B8C00F36EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +75,9 @@
 		59DCB64B23B26B8D00F36EDB /* OTPAnalyzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OTPAnalyzerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59DCB64F23B26B8D00F36EDB /* OTPAnalyzerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPAnalyzerUITests.swift; sourceTree = "<group>"; };
 		59DCB65123B26B8D00F36EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59EA975823F9793D0046AD06 /* CheckCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCellView.swift; sourceTree = "<group>"; };
+		59FBCC9B24507C6C00E586EC /* FadeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeEngine.swift; sourceTree = "<group>"; };
+		59FBCC9D24507D8400E586EC /* Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fade.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59EA975723F963480046AD06 /* NetUtils in Frameworks */,
+				59DC385424530F3700C41FDF /* OTPKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +107,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		593DFF7D2440AE8100C5867E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				593DFF7E2440AE9B00C5867E /* Log.swift */,
+				5934A0CC24439365001EA9F4 /* ProducerModel.swift */,
+				5934A0CE24439689001EA9F4 /* ConsumerModel.swift */,
+				59FBCC9B24507C6C00E586EC /* FadeEngine.swift */,
+				59FBCC9D24507D8400E586EC /* Fade.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		59A91F6823F355FE0077EA82 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59EA975823F9793D0046AD06 /* CheckCellView.swift */,
+				5947C291244321CA0017F6A2 /* ProducerPointItem.swift */,
+				5947C292244321CA0017F6A2 /* ProducerPointItem.xib */,
+				593DFF7B2440655B00C5867E /* ShortTitleCell.swift */,
+				596EC94224479797000DFC3F /* ConsumerPointItem.xib */,
+				596EC9452447C3B0000DFC3F /* ConsumerPointItem.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		59DCB62523B26B8A00F36EDB = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +139,7 @@
 				59DCB64323B26B8C00F36EDB /* OTPAnalyzerTests */,
 				59DCB64E23B26B8D00F36EDB /* OTPAnalyzerUITests */,
 				59DCB62F23B26B8A00F36EDB /* Products */,
+				59DCB66223B26DFE00F36EDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,8 +156,10 @@
 		59DCB63023B26B8A00F36EDB /* OTPAnalyzer */ = {
 			isa = PBXGroup;
 			children = (
+				59EE7C4624447090002B1C69 /* Controllers */,
+				593DFF7D2440AE8100C5867E /* Data */,
+				59A91F6823F355FE0077EA82 /* Views */,
 				59DCB63123B26B8A00F36EDB /* AppDelegate.swift */,
-				59DCB63323B26B8A00F36EDB /* ViewController.swift */,
 				59DCB63523B26B8C00F36EDB /* Assets.xcassets */,
 				59DCB63723B26B8C00F36EDB /* Main.storyboard */,
 				59DCB63A23B26B8C00F36EDB /* Info.plist */,
@@ -124,6 +186,25 @@
 			path = OTPAnalyzerUITests;
 			sourceTree = "<group>";
 		};
+		59DCB66223B26DFE00F36EDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59EE7C4624447090002B1C69 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5934A0D024439E69001EA9F4 /* AddPointController.swift */,
+				59A91F6B23F3563A0077EA82 /* ConsumerController.swift */,
+				593DFF8024421EAC00C5867E /* ConsumerSystemsController.swift */,
+				59A91F6D23F3566B0077EA82 /* LauncherController.swift */,
+				59A91F6923F356250077EA82 /* ProducerController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +221,10 @@
 			dependencies = (
 			);
 			name = OTPAnalyzer;
+			packageProductDependencies = (
+				59EA975623F963480046AD06 /* NetUtils */,
+				59DC385324530F3700C41FDF /* OTPKit */,
+			);
 			productName = OTPAnalyzer;
 			productReference = 59DCB62E23B26B8A00F36EDB /* OTPAnalyzer.app */;
 			productType = "com.apple.product-type.application";
@@ -187,7 +272,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Daniel Murfin";
 				TargetAttributes = {
 					59DCB62D23B26B8A00F36EDB = {
@@ -212,6 +297,10 @@
 				Base,
 			);
 			mainGroup = 59DCB62523B26B8A00F36EDB;
+			packageReferences = (
+				59EA975523F963480046AD06 /* XCRemoteSwiftPackageReference "swift-netutils" */,
+				59DC385224530F3700C41FDF /* XCRemoteSwiftPackageReference "OTPKit" */,
+			);
 			productRefGroup = 59DCB62F23B26B8A00F36EDB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -229,7 +318,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				59DCB63623B26B8C00F36EDB /* Assets.xcassets in Resources */,
+				5947C294244321CA0017F6A2 /* ProducerPointItem.xib in Resources */,
 				59DCB63923B26B8C00F36EDB /* Main.storyboard in Resources */,
+				596EC94424479797000DFC3F /* ConsumerPointItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,8 +345,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59DCB63423B26B8A00F36EDB /* ViewController.swift in Sources */,
+				596EC9462447C3B0000DFC3F /* ConsumerPointItem.swift in Sources */,
+				5934A0CF24439689001EA9F4 /* ConsumerModel.swift in Sources */,
+				59EA975923F9793D0046AD06 /* CheckCellView.swift in Sources */,
+				593DFF8124421EAC00C5867E /* ConsumerSystemsController.swift in Sources */,
+				593DFF7F2440AE9B00C5867E /* Log.swift in Sources */,
+				593DFF7C2440655B00C5867E /* ShortTitleCell.swift in Sources */,
+				59A91F6E23F3566B0077EA82 /* LauncherController.swift in Sources */,
+				59FBCC9E24507D8400E586EC /* Fade.swift in Sources */,
+				5934A0D124439E69001EA9F4 /* AddPointController.swift in Sources */,
+				59A91F6A23F356250077EA82 /* ProducerController.swift in Sources */,
+				59FBCC9C24507C6C00E586EC /* FadeEngine.swift in Sources */,
+				59A91F6C23F3563A0077EA82 /* ConsumerController.swift in Sources */,
 				59DCB63223B26B8A00F36EDB /* AppDelegate.swift in Sources */,
+				5947C293244321CA0017F6A2 /* ProducerPointItem.swift in Sources */,
+				5934A0CD24439365001EA9F4 /* ProducerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OTPAnalyzer/OTPAnalyzer.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 397VYP6USE;
@@ -429,6 +534,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielmurfin.OTPAnalyzer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -440,6 +547,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OTPAnalyzer/OTPAnalyzer.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 397VYP6USE;
@@ -449,6 +557,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielmurfin.OTPAnalyzer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -579,6 +689,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		59DC385224530F3700C41FDF /* XCRemoteSwiftPackageReference "OTPKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dsmurfin/OTPKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
+		59EA975523F963480046AD06 /* XCRemoteSwiftPackageReference "swift-netutils" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/svdo/swift-netutils.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		59DC385324530F3700C41FDF /* OTPKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 59DC385224530F3700C41FDF /* XCRemoteSwiftPackageReference "OTPKit" */;
+			productName = OTPKit;
+		};
+		59EA975623F963480046AD06 /* NetUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 59EA975523F963480046AD06 /* XCRemoteSwiftPackageReference "swift-netutils" */;
+			productName = NetUtils;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 59DCB62623B26B8A00F36EDB /* Project object */;
 }

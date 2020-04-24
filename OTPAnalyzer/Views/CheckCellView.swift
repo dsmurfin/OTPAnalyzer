@@ -1,5 +1,5 @@
 //
-//  OTPAnalyzerTests.swift
+//  CheckCellView.swift
 //
 //  Copyright (c) 2020 Daniel Murfin
 //
@@ -22,29 +22,35 @@
 //  THE SOFTWARE.
 //
 
-import XCTest
-@testable import OTPAnalyzer
+import Cocoa
 
-class OTPAnalyzerTests: XCTestCase {
+/**
+ Check Cell View
+ 
+ A table cell view containing an check button.
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+*/
+
+class CheckCellView: NSTableCellView {
+    
+    /// The check button displayed in this table cell view.
+    @IBOutlet var check: NSButton!
+    
+}
+
+/**
+ Button Extension
+ 
+ Extensions to `NSButton`.
+
+*/
+
+extension NSButton {
+    
+    /// The state of this button represented by checked or unchecked.
+    var checked: Bool {
+        get { state == .on }
+        set { state = newValue ? .on : .off }
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+    
 }

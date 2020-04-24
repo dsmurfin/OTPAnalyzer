@@ -1,5 +1,5 @@
 //
-//  OTPAnalyzerTests.swift
+//  ShortTitleCell.swift
 //
 //  Copyright (c) 2020 Daniel Murfin
 //
@@ -22,29 +22,32 @@
 //  THE SOFTWARE.
 //
 
-import XCTest
-@testable import OTPAnalyzer
+import Cocoa
 
-class OTPAnalyzerTests: XCTestCase {
+/**
+ Short Title Popup Button Cell
+ 
+ Displays a shortened title for this popup button cell using a dictionary represented object for the title.
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+*/
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+class ShortTitleCell: NSPopUpButtonCell {
+    
+    /// The key for the short title object in the dictionary.
+    static var shortTitle = "shortTitle"
+    
+    open override func drawTitle(_ title: NSAttributedString, withFrame frame: NSRect, in controlView: NSView) -> NSRect {
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        var attributedTitle = title
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        if let popUpButton = self.controlView as? NSPopUpButton, let object = popUpButton.selectedItem?.representedObject as? Dictionary<String, String> {
+            if let shortTitle = object[Self.shortTitle] {
+                attributedTitle = NSAttributedString(string:shortTitle, attributes:title.attributes(at:0, effectiveRange:nil))
+            }
         }
+        
+        return super.drawTitle(attributedTitle, withFrame:frame, in:controlView)
+        
     }
-
+    
 }
