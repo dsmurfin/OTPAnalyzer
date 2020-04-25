@@ -63,6 +63,7 @@
 		59A91F6923F356250077EA82 /* ProducerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducerController.swift; sourceTree = "<group>"; };
 		59A91F6B23F3563A0077EA82 /* ConsumerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumerController.swift; sourceTree = "<group>"; };
 		59A91F6D23F3566B0077EA82 /* LauncherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherController.swift; sourceTree = "<group>"; };
+		59DC38552453111B00C41FDF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		59DCB62E23B26B8A00F36EDB /* OTPAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTPAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59DCB63123B26B8A00F36EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59DCB63523B26B8C00F36EDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		59DCB62523B26B8A00F36EDB = {
 			isa = PBXGroup;
 			children = (
+				59DC38552453111B00C41FDF /* README.md */,
 				59DCB63023B26B8A00F36EDB /* OTPAnalyzer */,
 				59DCB64323B26B8C00F36EDB /* OTPAnalyzerTests */,
 				59DCB64E23B26B8D00F36EDB /* OTPAnalyzerUITests */,
