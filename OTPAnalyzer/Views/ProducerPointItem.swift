@@ -114,7 +114,7 @@ class ProducerPointItem: NSCollectionViewItem {
     static let identifier = NSUserInterfaceItemIdentifier(rawValue: "producerPointItemIdentifier")
 
     /// The size of the point item.
-    static let itemSize: NSSize = NSSize(width: 310.0, height: 374.0)
+    static let itemSize: NSSize = NSSize(width: 310.0, height: 353.0)
 
     /// The text to use when there is no module, or a module is 'started'.
     static let emptyValue: String = "--"
@@ -167,14 +167,11 @@ class ProducerPointItem: NSCollectionViewItem {
     /// Used for display and editing the scale module values.
     @IBOutlet var scaleX, scaleY, scaleZ: NSTextField!
     
-    /// Used for adding a parent module.
-    @IBOutlet var parentModule: NSButton!
+    /// Used for adding a reference frame module.
+    @IBOutlet var referenceFrameModule: NSButton!
     
-    /// Used for display and editing the parent module values.
-    @IBOutlet var parentSystem, parentGroup, parentPoint: NSTextField!
-    
-    /// Used for display and editing the parent scale value.
-    @IBOutlet var parentRelative: NSButton!
+    /// Used for display and editing the reference frame module values.
+    @IBOutlet var referenceFrameSystem, referenceFrameGroup, referenceFramePoint: NSTextField!
 
     /// The presented index of this item.
     var index: Int?
@@ -209,9 +206,9 @@ class ProducerPointItem: NSCollectionViewItem {
         scaleX.delegate = self
         scaleY.delegate = self
         scaleZ.delegate = self
-        parentSystem.delegate = self
-        parentGroup.delegate = self
-        parentPoint.delegate = self
+        referenceFrameSystem.delegate = self
+        referenceFrameGroup.delegate = self
+        referenceFramePoint.delegate = self
         
         // update the patterns available, and select the appropriate item
         pattern.removeAllItems()
@@ -434,35 +431,32 @@ class ProducerPointItem: NSCollectionViewItem {
     }
     
     /**
-     Refreshes any fields related to the parent module.
+     Refreshes any fields related to the reference frame module.
      
      - Parameters:
-        - module: An optional parent module.
+        - module: An optional reference frame module.
      
     */
-    func refreshParent(_ module: OTPModuleParent?) {
+    func refreshReferenceFrame(_ module: OTPModuleReferenceFrame?) {
         
         let enable = module != nil
         
-        parentModule.checked = enable
-        parentSystem.isEnabled = enable
-        parentGroup.isEnabled = enable
-        parentPoint.isEnabled = enable
-        parentRelative.isEnabled = enable
+        referenceFrameModule.checked = enable
+        referenceFrameSystem.isEnabled = enable
+        referenceFrameGroup.isEnabled = enable
+        referenceFramePoint.isEnabled = enable
         
         if let module = module {
             
-            parentSystem.stringValue = "\(module.systemNumber)"
-            parentGroup.stringValue = "\(module.groupNumber)"
-            parentPoint.stringValue = "\(module.pointNumber)"
-            parentRelative.checked = module.relative
+            referenceFrameSystem.stringValue = "\(module.systemNumber)"
+            referenceFrameGroup.stringValue = "\(module.groupNumber)"
+            referenceFramePoint.stringValue = "\(module.pointNumber)"
 
         } else {
             
-            parentSystem.stringValue = Self.emptyValue
-            parentGroup.stringValue = Self.emptyValue
-            parentPoint.stringValue = Self.emptyValue
-            parentRelative.checked = false
+            referenceFrameSystem.stringValue = Self.emptyValue
+            referenceFrameGroup.stringValue = Self.emptyValue
+            referenceFramePoint.stringValue = Self.emptyValue
             
         }
         
@@ -493,8 +487,8 @@ class ProducerPointItem: NSCollectionViewItem {
             moduleTypes = [OTPModuleRotationVelAccel.self]
         case scaleModule:
             moduleTypes = [OTPModuleScale.self]
-        case parentModule:
-            moduleTypes = [OTPModuleParent.self]
+        case referenceFrameModule:
+            moduleTypes = [OTPModuleReferenceFrame.self]
         default:
             moduleTypes = [OTPModulePosition.self]
         }
@@ -526,25 +520,6 @@ class ProducerPointItem: NSCollectionViewItem {
             
             let module = OTPModulePosition(x: posX.intValue, y: posY.intValue, z: posZ.intValue, scaling: posScale.checked ? .mm : .μm)
             delegate?.updateModule(module, forPointAtIndex: pointIndex)
-            
-        case parentRelative:
-            
-            // there must be valid values for each field
-            guard let system = OTPSystemNumber(parentSystem.stringValue), let group = OTPGroupNumber(parentGroup.stringValue), let point = OTPPointNumber(parentPoint.stringValue) else { return }
-                        
-            do {
-                
-                let address = try OTPAddress(system, group, point)
-                
-                let module = OTPModuleParent(address: address, relative: parentRelative.checked)
-                delegate?.updateModule(module, forPointAtIndex: pointIndex)
-
-            } catch {
-                
-                // restore the state of the check box
-                sender.checked.toggle()
-                
-            }
 
         default:
             break
@@ -651,16 +626,16 @@ extension ProducerPointItem: NSTextFieldDelegate {
             let module = OTPModuleScale(x: scaleXValue, y: scaleYValue, z: scaleZValue)
             delegate?.updateModule(module, forPointAtIndex: pointIndex)
             
-        case parentSystem, parentGroup, parentPoint:
+        case referenceFrameSystem, referenceFrameGroup, referenceFramePoint:
             
             // there must be valid values for each field
-            guard let system = OTPSystemNumber(parentSystem.stringValue), let group = OTPGroupNumber(parentGroup.stringValue), let point = OTPPointNumber(parentPoint.stringValue) else { return true }
+            guard let system = OTPSystemNumber(referenceFrameSystem.stringValue), let group = OTPGroupNumber(referenceFrameGroup.stringValue), let point = OTPPointNumber(referenceFramePoint.stringValue) else { return true }
                         
             do {
                 
                 let address = try OTPAddress(system, group, point)
                 
-                let module = OTPModuleParent(address: address, relative: parentRelative.checked)
+                let module = OTPModuleReferenceFrame(address: address)
                 delegate?.updateModule(module, forPointAtIndex: pointIndex)
 
             } catch {

@@ -44,7 +44,7 @@ class ConsumerPointItem: NSCollectionViewItem {
     static let identifier = NSUserInterfaceItemIdentifier(rawValue: "consumerPointItemIdentifier")
 
     /// The size of the point item.
-    static let itemSize: NSSize = NSSize(width: 380.0, height: 276.0)
+    static let itemSize: NSSize = NSSize(width: 380.0, height: 258.0)
 
     /// The text to use when there is no module, or a module is 'started'.
     static let emptyValue: String = "--"
@@ -79,11 +79,8 @@ class ConsumerPointItem: NSCollectionViewItem {
     /// Used for display and editing the scale module values.
     @IBOutlet var scaleX, scaleY, scaleZ: NSTextField!
     
-    /// Used for display and editing the parent module values.
-    @IBOutlet var parentSystem, parentGroup, parentPoint: NSTextField!
-    
-    /// Used for display and editing the parent scale value.
-    @IBOutlet var parentRelative: NSButton!
+    /// Used for display and editing the reference frame module values.
+    @IBOutlet var referenceFrameSystem, referenceFrameGroup, referenceFramePoint: NSTextField!
 
     override func viewDidLoad() {
         
@@ -267,34 +264,31 @@ class ConsumerPointItem: NSCollectionViewItem {
     }
     
     /**
-     Refreshes any fields related to the parent module.
+     Refreshes any fields related to the reference frame module.
      
      - Parameters:
-        - module: An optional parent module.
+        - module: An optional reference frame module.
      
     */
-    func refreshParent(_ module: OTPModuleParent?) {
+    func refreshReferenceFrame(_ module: OTPModuleReferenceFrame?) {
         
         let enable = module != nil
         
-        parentSystem.isEnabled = enable
-        parentGroup.isEnabled = enable
-        parentPoint.isEnabled = enable
-        parentRelative.isEnabled = enable
+        referenceFrameSystem.isEnabled = enable
+        referenceFrameGroup.isEnabled = enable
+        referenceFramePoint.isEnabled = enable
         
         if let module = module {
             
-            parentSystem.stringValue = "\(module.systemNumber)"
-            parentGroup.stringValue = "\(module.groupNumber)"
-            parentPoint.stringValue = "\(module.pointNumber)"
-            parentRelative.checked = module.relative
+            referenceFrameSystem.stringValue = "\(module.systemNumber)"
+            referenceFrameGroup.stringValue = "\(module.groupNumber)"
+            referenceFramePoint.stringValue = "\(module.pointNumber)"
 
         } else {
             
-            parentSystem.stringValue = Self.emptyValue
-            parentGroup.stringValue = Self.emptyValue
-            parentPoint.stringValue = Self.emptyValue
-            parentRelative.checked = false
+            referenceFrameSystem.stringValue = Self.emptyValue
+            referenceFrameGroup.stringValue = Self.emptyValue
+            referenceFramePoint.stringValue = Self.emptyValue
             
         }
         

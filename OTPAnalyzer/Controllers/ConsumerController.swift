@@ -105,7 +105,7 @@ class ConsumerController: NSViewController {
     @IBOutlet var logDebugSocket: NSButton!
     
     /// Used for the selection of observed modules for this consumer.
-    @IBOutlet var modulePos, modulePosVelAccel, moduleRot, moduleRotVelAccel, moduleScale, moduleParent: NSButton!
+    @IBOutlet var modulePos, modulePosVelAccel, moduleRot, moduleRotVelAccel, moduleScale, moduleReferenceFrame: NSButton!
     
     /// Used for requested the names of points.
     @IBOutlet var requestNames: NSButton!
@@ -373,7 +373,7 @@ class ConsumerController: NSViewController {
             if moduleRot.checked { moduleTypes.append(OTPModuleRotation.self) }
             if moduleRotVelAccel.checked { moduleTypes.append(OTPModuleRotationVelAccel.self) }
             if moduleScale.checked { moduleTypes.append(OTPModuleScale.self) }
-            if moduleParent.checked { moduleTypes.append(OTPModuleParent.self) }
+            if moduleReferenceFrame.checked { moduleTypes.append(OTPModuleReferenceFrame.self) }
  
             // attempt to start the consumer
             viewModel.startConsumer(name: name.stringValue, ipMode: ipMode, moduleTypes: moduleTypes, interval: Self.delegateInterval, logErrors: logErrors.checked, logDebug: logDebug.checked, logSocket: logDebugSocket.checked)
@@ -477,8 +477,8 @@ class ConsumerController: NSViewController {
             moduleTypes = [OTPModuleRotationVelAccel.self]
         case moduleScale:
             moduleTypes = [OTPModuleScale.self]
-        case moduleParent:
-            moduleTypes = [OTPModuleParent.self]
+        case moduleReferenceFrame:
+            moduleTypes = [OTPModuleReferenceFrame.self]
         default:
             moduleTypes = [OTPModulePosition.self]
         }
@@ -659,7 +659,7 @@ extension ConsumerController: NSCollectionViewDataSource {
         item.refreshRotation(point.modules.first(where: { $0.moduleIdentifier == OTPModuleRotation.identifier }) as? OTPModuleRotation)
         item.refreshRotationVelAccel(point.modules.first(where: { $0.moduleIdentifier == OTPModuleRotationVelAccel.identifier }) as? OTPModuleRotationVelAccel)
         item.refreshScale(point.modules.first(where: { $0.moduleIdentifier == OTPModuleScale.identifier }) as? OTPModuleScale)
-        item.refreshParent(point.modules.first(where: { $0.moduleIdentifier == OTPModuleParent.identifier }) as? OTPModuleParent)
+        item.refreshReferenceFrame(point.modules.first(where: { $0.moduleIdentifier == OTPModuleReferenceFrame.identifier }) as? OTPModuleReferenceFrame)
         
         // update the point properties
         item.address.stringValue = point.address.description

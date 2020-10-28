@@ -628,7 +628,7 @@ extension ProducerController: NSCollectionViewDataSource {
         item.refreshRotation(point.modules.first(where: { $0.moduleIdentifier == OTPModuleRotation.identifier }) as? OTPModuleRotation, fading: fading)
         item.refreshRotationVelAccel(point.modules.first(where: { $0.moduleIdentifier == OTPModuleRotationVelAccel.identifier }) as? OTPModuleRotationVelAccel, fading: fading)
         item.refreshScale(point.modules.first(where: { $0.moduleIdentifier == OTPModuleScale.identifier }) as? OTPModuleScale)
-        item.refreshParent(point.modules.first(where: { $0.moduleIdentifier == OTPModuleParent.identifier }) as? OTPModuleParent)
+        item.refreshReferenceFrame(point.modules.first(where: { $0.moduleIdentifier == OTPModuleReferenceFrame.identifier }) as? OTPModuleReferenceFrame)
         
         // update the point properties
         item.address.stringValue = point.address.description
