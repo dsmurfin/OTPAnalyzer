@@ -20,7 +20,7 @@ macOS 10.14+
 
 ### Installing
 
-Download the repository and open the Xcode project, or access pre-built app xips from the [releases](https://github.com/dsmurfin/OTPAnalyzer/releases) page. Select a release and then expand assets.
+Download the repository and open the Xcode project, or access pre-built app zips from the [releases](https://github.com/dsmurfin/OTPAnalyzer/releases) page. Select a release and then expand assets.
 
 ## Deployment
 
