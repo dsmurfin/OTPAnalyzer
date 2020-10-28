@@ -1,12 +1,12 @@
 # OTPAnalyzer
 
-![OTPAnalyzer Icon](https://github.com/dsmurfin/OTPAnalyzer/blob/master/OTPAnalyzer/Assets.xcassets/AppIcon.appiconset/Icon%40128.png)
+![OTPAnalyzer Icon](https://github.com/dsmurfin/OTPAnalyzer/blob/master/OTPAnalyzer/Assets.xcassets/AppIcon.appiconset/IconMac128.png)
 
 A macOS application for testing and evaluating BSR E1.59 - 20XX Entertainment Technology Object Transform Protocol (OTP).
 
 Provides complete protocol implementations of OTP Producer and Consumer components using IPv4/6.
 
-Current revision: Document Number: CP/2018-1034r4 (not yet published for review).
+Current revision: Document Number: CP/2018-1034r5.
 
 **This application should not be used for deployment to a live system. It is provided solely for testing and evaluation.**
 
@@ -16,8 +16,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Requires Swift 5.2  
 macOS 10.14+
+
+### Installing
+
+Download the repository and open the Xcode project, or access pre-built app xips from the [releases](https://github.com/dsmurfin/OTPAnalyzer/releases) page. Select a release and then expand assets.
 
 ## Deployment
 
