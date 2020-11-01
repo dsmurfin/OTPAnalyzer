@@ -686,6 +686,13 @@ extension ProducerController: NSTextFieldDelegate {
 extension ProducerController: NSWindowDelegate {
     
     func windowWillClose(_ notification: Notification) {
+        
+        if viewModel.started {
+        
+            // attempt to stop the producer
+            viewModel.stopProducer()
+            
+        }
 
         // notify the delegate that this producer controller is closing
         viewModel.controllerDelegate?.closingProducerController(self)

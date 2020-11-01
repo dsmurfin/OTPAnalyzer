@@ -723,6 +723,13 @@ extension ConsumerController: NSTextFieldDelegate {
 extension ConsumerController: NSWindowDelegate {
     
     func windowWillClose(_ notification: Notification) {
+        
+        if viewModel.started {
+        
+            // attempt to stop the consumer
+            viewModel.stopConsumer()
+            
+        }
 
         // notify the delegate that this consumer controller is closing
         viewModel.controllerDelegate?.closingConsumerController(self)
