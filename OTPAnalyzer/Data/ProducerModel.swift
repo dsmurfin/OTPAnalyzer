@@ -260,6 +260,15 @@ class ProducerModel {
     }
     
     /**
+     Resets the logs.
+     */
+    func resetLogs() {
+        Self.queue.sync(flags: .barrier) {
+            log.reset()
+        }
+    }
+    
+    /**
      Updates the name of the producer.
      
      - Parameters:

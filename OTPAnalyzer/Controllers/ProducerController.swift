@@ -422,6 +422,17 @@ class ProducerController: NSViewController {
     }
     
     /**
+     Resets the logs.
+     
+        - Parameters:
+            - sender: The button sending this action.
+     
+    */
+    @IBAction func resetLogs(_ sender: AnyObject) {
+        viewModel.resetLogs()
+    }
+    
+    /**
      Changes whether to log for the selected check button.
      
      - Parameters:
