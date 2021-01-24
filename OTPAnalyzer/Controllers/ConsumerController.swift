@@ -591,6 +591,7 @@ extension ConsumerController: NSTableViewDataSource, NSTableViewDelegate {
     private enum ColumnIdentifiers: String {
         case name = "name"
         case cid = "cid"
+        case ipMode = "ipMode"
         case ipAddress = "ipAddress"
         case state = "state"
         case sequenceErrors = "sequenceErrors"
@@ -616,8 +617,10 @@ extension ConsumerController: NSTableViewDataSource, NSTableViewDelegate {
             textCellView.textField?.stringValue = producer.name
         case .cid:
             textCellView.textField?.stringValue = producer.cid.uuidString
+        case .ipMode:
+            textCellView.textField?.stringValue = producer.ipMode.rawValue
         case .ipAddress:
-            textCellView.textField?.stringValue = producer.ipAddress
+            textCellView.textField?.stringValue = producer.ipAddresses.joined(separator: ", ")
         case .state:
             textCellView.textField?.stringValue = producer.state.rawValue.capitalized
         case .sequenceErrors:
