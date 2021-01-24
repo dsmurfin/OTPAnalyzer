@@ -229,6 +229,16 @@ class ConsumerModel {
             
             // reset the consumer
             self.consumer = nil
+            
+            // remove all points
+            self._points = []
+            
+            // remove all discovered system numbers
+            self._observedSystemNumbers = []
+            self._discoveredSystemNumbers = []
+            
+            // remove all discovered producers
+            self._producers = []
 
             // clear the logs
             log.reset()

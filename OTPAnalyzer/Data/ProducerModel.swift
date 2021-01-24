@@ -248,6 +248,9 @@ class ProducerModel {
             
             // resets all fades
             self.fadeEngine.reset()
+            
+            // remove all discovered consumers
+            self._consumers = []
 
             // clear the logs
             log.reset()

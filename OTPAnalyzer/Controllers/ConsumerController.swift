@@ -414,6 +414,14 @@ class ConsumerController: NSViewController {
         // update the button title
         startStopButton.title = "Start"
         
+        // reload to clear points and producers
+        pointsCollectionView.reloadData()
+        producersTableView.reloadData()
+        
+        view.window?.title = "OTP Consumer {\(viewModel.identifierCid.uuidString)}"
+        
+        prepareSystemsButton()
+        
     }
     
     /**
@@ -754,7 +762,7 @@ extension ConsumerController: ConsumerSystemsControllerDelegate {
      Called whenever the observed system numbers changes
      
      - Parameters:
-        - systemNumbers: The system numbers to be observed. An empty array measn all system numbers should be observed.
+        - systemNumbers: The system numbers to be observed. An empty array means all system numbers should be observed.
      
     */
     func shouldObserveSystemNumbers(_ systemNumbers: [OTPSystemNumber]) {

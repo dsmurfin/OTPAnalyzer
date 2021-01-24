@@ -411,8 +411,11 @@ class ProducerController: NSViewController {
         // update the button title
         startStopButton.title = "Start"
         
-        // reload to clear points
+        // reload to clear points and consumers
         pointsCollectionView.reloadData()
+        consumersTableView.reloadData()
+
+        view.window?.title = "OTP Producer {\(viewModel.identifierCid.uuidString)}"
         
     }
     
