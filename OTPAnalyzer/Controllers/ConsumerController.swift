@@ -137,6 +137,8 @@ class ConsumerController: NSViewController {
         // disable buttons
         reset.isEnabled = false
         requestNames.isEnabled = false
+        logDebug.checked = false
+        logDebugSocket.isEnabled = logDebug.checked
         
         // configure the collection view
         configureCollectionView()
@@ -438,6 +440,7 @@ class ConsumerController: NSViewController {
             viewModel.logErrors(sender.checked)
         case logDebug:
             viewModel.logDebug(sender.checked)
+            logDebugSocket.isEnabled = sender.checked
         case logDebugSocket:
             viewModel.logDebugSocket(sender.checked)
         default:

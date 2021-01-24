@@ -131,6 +131,8 @@ class ProducerController: NSViewController {
         // disable buttons
         addPointButton.isEnabled = false
         reset.isEnabled = false
+        logDebug.checked = false
+        logDebugSocket.isEnabled = logDebug.checked
         
         // configure the collection view
         configureCollectionView()
@@ -433,6 +435,7 @@ class ProducerController: NSViewController {
             viewModel.logErrors(sender.checked)
         case logDebug:
             viewModel.logDebug(sender.checked)
+            logDebugSocket.isEnabled = sender.checked
         case logDebugSocket:
             viewModel.logDebugSocket(sender.checked)
         default:
