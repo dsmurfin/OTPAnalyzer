@@ -876,9 +876,9 @@ extension ProducerModel: OTPComponentDebugDelegate {
         let logDebugSocket = Self.queue.sync { self.logDebugSocket }
         
         // only log if set
-        guard logDebugSocket else { return}
+        guard logDebugSocket else { return }
         
-        log.add(message: logMessage, ofType: .debug)
+        log.add(message: logMessage, ofType: .socket)
         
     }
     
