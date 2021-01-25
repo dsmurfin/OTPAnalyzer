@@ -661,6 +661,7 @@ class ProducerModel {
      
     */
     func logErrors(_ log: Bool) {
+        self.log.logErrors = log
         Self.queue.sync {
             producer?.setProtocolErrorDelegate(log ? self : nil)
         }
@@ -674,6 +675,7 @@ class ProducerModel {
      
     */
     func logDebug(_ log: Bool) {
+        self.log.logDebug = log
         Self.queue.sync {
             producer?.setDebugDelegate(log ? self : nil)
         }
@@ -687,6 +689,7 @@ class ProducerModel {
      
     */
     func logDebugSocket(_ log: Bool) {
+        self.log.logDebugSocket = log
         Self.queue.sync(flags: .barrier) {
             logDebugSocket = log
         }
@@ -870,7 +873,9 @@ extension ProducerModel: OTPComponentDebugDelegate {
      
     */
     func debugLog(_ logMessage: String) {
-        log.add(message: logMessage, ofType: .debug)
+        if started {
+            log.add(message: logMessage, ofType: .debug)
+        }
     }
     
     /**
@@ -887,7 +892,9 @@ extension ProducerModel: OTPComponentDebugDelegate {
         // only log if set
         guard logDebugSocket else { return }
         
-        log.add(message: logMessage, ofType: .socket)
+        if started {
+            log.add(message: logMessage, ofType: .socket)
+        }
         
     }
     

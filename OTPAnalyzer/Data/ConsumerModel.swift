@@ -336,6 +336,7 @@ class ConsumerModel {
      
     */
     func logErrors(_ log: Bool) {
+        self.log.logErrors = log
         Self.queue.sync {
             consumer?.setProtocolErrorDelegate(log ? self : nil)
         }
@@ -349,6 +350,7 @@ class ConsumerModel {
      
     */
     func logDebug(_ log: Bool) {
+        self.log.logDebug = log
         Self.queue.sync {
             consumer?.setDebugDelegate(log ? self : nil)
         }
@@ -362,6 +364,7 @@ class ConsumerModel {
      
     */
     func logDebugSocket(_ log: Bool) {
+        self.log.logDebugSocket = log
         Self.queue.sync(flags: .barrier) {
             logDebugSocket = log
         }
@@ -541,7 +544,9 @@ extension ConsumerModel: OTPComponentDebugDelegate {
      
     */
     func debugLog(_ logMessage: String) {
-        log.add(message: logMessage, ofType: .debug)
+        if started {
+            log.add(message: logMessage, ofType: .debug)
+        }
     }
     
     /**
@@ -558,7 +563,9 @@ extension ConsumerModel: OTPComponentDebugDelegate {
         // only log if set
         guard logDebugSocket else { return }
         
-        log.add(message: logMessage, ofType: .socket)
+        if started {
+            log.add(message: logMessage, ofType: .socket)
+        }
         
     }
     

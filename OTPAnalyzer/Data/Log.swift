@@ -105,6 +105,33 @@ public final class Log {
     
     /// The delegate to be notified when changes to the logs occur.
     weak var delegate: LogDelegate?
+    
+    /// Whether errors should be logged.
+    var logErrors: Bool {
+        get { Self.queue.sync { _logErrors } }
+        set (newValue) { return Self.queue.sync { _logErrors = newValue } }
+    }
+    
+    /// Whether errors should be logged (internal).
+    private var _logErrors: Bool = false
+    
+    /// Whether debug errors should be logged.
+    var logDebug: Bool {
+        get { Self.queue.sync { _logDebug } }
+        set (newValue) { return Self.queue.sync { _logDebug = newValue } }
+    }
+    
+    /// Whether debug errors should be logged (internal).
+    private var _logDebug: Bool = false
+    
+    /// Whether debug socket errors should be logged.
+    var logDebugSocket: Bool {
+        get { Self.queue.sync { _logDebugSocket } }
+        set (newValue) { return Self.queue.sync { _logDebugSocket = newValue } }
+    }
+    
+    /// Whether debug socket errors should be logged (internal).
+    private var _logDebugSocket: Bool = false
 
     /**
      Adds a new message of the type specified to the logs.
@@ -115,6 +142,17 @@ public final class Log {
      
     */
     func add(message: String, ofType type: MessageType) {
+                    
+        switch type {
+        case .info:
+            break
+        case .unknown, .protocolLayer, .protocolSequence, .protocolUnknown:
+            guard logErrors else { return }
+        case .debug:
+            guard logDebug else { return }
+        case .socket:
+            guard logDebug && logDebugSocket else { return }
+        }
         
         Self.queue.async {
             

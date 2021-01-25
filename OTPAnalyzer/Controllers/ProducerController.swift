@@ -131,15 +131,11 @@ class ProducerController: NSViewController {
         // disable buttons
         addPointButton.isEnabled = false
         reset.isEnabled = false
-        logDebug.checked = false
-        logDebugSocket.isEnabled = logDebug.checked
         
         // configure the collection view
         configureCollectionView()
         
-        // this controller should receive log notifications
-        viewModel.log.delegate = self
-        viewModel.log.addVersion()
+        prepareLogging()
         
     }
     
@@ -277,6 +273,24 @@ class ProducerController: NSViewController {
             // the first interface found should be used
             viewModel.interfaceName = interface.name
         }
+        
+    }
+    
+    /**
+     Prepares logging.
+     */
+    private func prepareLogging() {
+        
+        logDebug.checked = false
+        logDebugSocket.isEnabled = logDebug.checked
+        
+        viewModel.log.logErrors = logErrors.checked
+        viewModel.log.logDebug = logDebug.checked
+        viewModel.log.logDebugSocket = logDebugSocket.checked
+
+        // this controller should receive log notifications
+        viewModel.log.delegate = self
+        viewModel.log.addVersion()
         
     }
     
