@@ -247,7 +247,7 @@ class LauncherController: NSViewController {
             guard let self = self else { return }
             
             // get the interfaces we care about
-            let interfaces = Interface.allInterfaces().filter { $0.isUp && $0.isRunning && ($0.name.prefix(2) == "en" || $0.name.prefix(2) == "lo") }
+            let interfaces = Interface.allInterfaces().filter { $0.isUp && $0.isRunning && ($0.name.prefix(2) == "en" || $0.name.prefix(2) == "lo" || $0.name.prefix(4) == "vlan" || $0.name.prefix(4) == "bond") }
 
             DispatchQueue.main.async { [weak self] in
 
