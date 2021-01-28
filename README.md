@@ -1,6 +1,6 @@
 # OTPAnalyzer
 
-![OTPAnalyzer Icon](https://github.com/dsmurfin/OTPAnalyzer/blob/master/OTPAnalyzer/Assets.xcassets/AppIcon.appiconset/IconMac128.png)
+![OTPAnalyzer Icon](https://github.com/dsmurfin/OTPAnalyzer/blob/main/OTPAnalyzer/Assets.xcassets/AppIcon.appiconset/IconMac128.png)
 
 A macOS application for testing and evaluating BSR E1.59 - 20XX Entertainment Technology Object Transform Protocol (OTP).
 
