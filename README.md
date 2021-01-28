@@ -2,13 +2,13 @@
 
 ![OTPAnalyzer Icon](https://github.com/dsmurfin/OTPAnalyzer/blob/main/OTPAnalyzer/Assets.xcassets/AppIcon.appiconset/IconMac128.png)
 
-A macOS application for testing and evaluating BSR E1.59 - 20XX Entertainment Technology Object Transform Protocol (OTP).
+A macOS application for testing and evaluating ANSI E1.59 - 2021, Entertainment Technology - Object Transform Protocol (OTP).
 
-Provides complete protocol implementations of OTP Producer and Consumer components using IPv4/6.
+Provides complete protocol implementations of OTP Producer and Consumer components using IPv4/6 (OTP-4, OTP-6, OTP-4/6).
 
 Current revision: Document Number: CP/2018-1034r5.
 
-**This application should not be used for deployment to a live system. It is provided solely for testing and evaluation.**
+[Download](https://tsp.esta.org/tsp/documents/published_docs.php) the full standard document.
 
 ## Getting Started
 
