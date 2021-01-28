@@ -101,7 +101,7 @@ class LauncherController: NSViewController {
         
             // create and show an alert while in public review
             let alert = NSAlert()
-            alert.messageText  = "ESTA BSR E1.59 - 20XX Object Transform Protocol (OTP)\n\nBased on Public Review 4. This application is intended solely for testing and evaluation."
+            alert.messageText  = "ANSI E1.59 - 2021, Entertainment Technology - Object Transform Protocol (OTP)"
             alert.informativeText  = "This standard describes a mechanism to transfer object transform information such as position, rotation and velocity over an IP network. It covers data format, data protocol, data addressing, and network management. It does not require real-world location or any association between multiple objects represented in the same message.\n\nData transmitted is intended to coordinate visual and audio elements of a production and should not be used for safety critical applications."
             alert.runModal()
             
