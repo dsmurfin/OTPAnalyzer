@@ -786,6 +786,8 @@ extension ProducerController: ProducerPointItemDelegate {
     */
     func removePoint(_ pointIndex: Int) {
         
+        guard viewModel.points.count > pointIndex else { return }
+        
         let point = viewModel.points[pointIndex]
         
         // remove the point
@@ -805,6 +807,8 @@ extension ProducerController: ProducerPointItemDelegate {
      
     */
     func addModule(_ moduleType: OTPModule.Type, toPointAtIndex pointIndex: Int) {
+        
+        guard viewModel.points.count > pointIndex else { return }
 
         let point = viewModel.points[pointIndex]
         
@@ -826,6 +830,8 @@ extension ProducerController: ProducerPointItemDelegate {
     */
     func removeModule(_ moduleType: OTPModule.Type, fromPointAtIndex pointIndex: Int) {
         
+        guard viewModel.points.count > pointIndex else { return }
+        
         let point = viewModel.points[pointIndex]
         
         // remove the module from the point
@@ -844,6 +850,8 @@ extension ProducerController: ProducerPointItemDelegate {
      
     */
     func updateName(_ name: String, forPointAtIndex pointIndex: Int) {
+        
+        guard viewModel.points.count > pointIndex else { return }
         
         let point = viewModel.points[pointIndex]
         
@@ -865,6 +873,8 @@ extension ProducerController: ProducerPointItemDelegate {
     */
     func updateModule(_ module: OTPModule, forPointAtIndex pointIndex: Int) {
         
+        guard viewModel.points.count > pointIndex else { return }
+        
         let point = viewModel.points[pointIndex]
         
         // update this module
@@ -881,6 +891,8 @@ extension ProducerController: ProducerPointItemDelegate {
 
     */
     func startStopFade(withPattern pattern: Fade.Pattern, forPointAtIndex pointIndex: Int) {
+        
+        guard viewModel.points.count > pointIndex else { return }
         
         let point = viewModel.points[pointIndex]
         
