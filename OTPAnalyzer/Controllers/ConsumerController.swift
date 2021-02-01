@@ -732,18 +732,18 @@ extension ConsumerController: NSCollectionViewDataSource {
 
 extension ConsumerController: NSTextFieldDelegate {
     
-    func control(_ control: NSControl, textShouldEndEditing fieldEditor: NSText) -> Bool {
+    func controlTextDidEndEditing(_ obj: Notification) {
         
-        let string = fieldEditor.string
-
+        guard let control = obj.object as? NSTextField else { return }
+        
+        let string = control.stringValue
+        
         switch control {
         case name:
             viewModel.updateConsumerName(string)
         default:
             break
         }
-        
-        return true
         
     }
     

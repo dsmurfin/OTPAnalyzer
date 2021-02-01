@@ -690,18 +690,18 @@ extension ProducerController: NSCollectionViewDataSource {
 
 extension ProducerController: NSTextFieldDelegate {
     
-    func control(_ control: NSControl, textShouldEndEditing fieldEditor: NSText) -> Bool {
-        
-        let string = fieldEditor.string
+    func controlTextDidEndEditing(_ obj: Notification) {
 
+        guard let control = obj.object as? NSTextField else { return }
+        
+        let string = control.stringValue
+        
         switch control {
         case name:
             viewModel.updateProducerName(string)
         default:
             break
         }
-        
-        return true
         
     }
     

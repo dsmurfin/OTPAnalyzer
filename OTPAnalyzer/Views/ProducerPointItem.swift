@@ -577,13 +577,15 @@ class ProducerPointItem: NSCollectionViewItem {
 
 extension ProducerPointItem: NSTextFieldDelegate {
     
-    func control(_ control: NSControl, textShouldEndEditing fieldEditor: NSText) -> Bool {
+    func controlTextDidEndEditing(_ obj: Notification) {
         
         // a point index must have been provided
-        guard let pointIndex = index else { return true }
+        guard let pointIndex = index else { return }
         
-        let string = fieldEditor.string
-
+        guard let control = obj.object as? NSTextField else { return }
+        
+        let string = control.stringValue
+        
         switch control {
         case name:
             delegate?.updateName(string, forPointAtIndex: pointIndex)
@@ -629,7 +631,7 @@ extension ProducerPointItem: NSTextFieldDelegate {
         case referenceFrameSystem, referenceFrameGroup, referenceFramePoint:
             
             // there must be valid values for each field
-            guard let system = OTPSystemNumber(referenceFrameSystem.stringValue), let group = OTPGroupNumber(referenceFrameGroup.stringValue), let point = OTPPointNumber(referenceFramePoint.stringValue) else { return true }
+            guard let system = OTPSystemNumber(referenceFrameSystem.stringValue), let group = OTPGroupNumber(referenceFrameGroup.stringValue), let point = OTPPointNumber(referenceFramePoint.stringValue) else { return }
                         
             do {
                 
@@ -645,8 +647,6 @@ extension ProducerPointItem: NSTextFieldDelegate {
         default:
             break
         }
-
-        return true
         
     }
     
