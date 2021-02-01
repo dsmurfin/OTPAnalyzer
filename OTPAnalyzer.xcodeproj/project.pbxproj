@@ -704,7 +704,7 @@
 			repositoryURL = "https://github.com/dsmurfin/OTPKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 1.0.2;
 			};
 		};
 		59EA975523F963480046AD06 /* XCRemoteSwiftPackageReference "swift-netutils" */ = {
