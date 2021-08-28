@@ -92,6 +92,9 @@ class ProducerController: NSViewController {
     /// Used for selection of the interval this producer should use for transmitting transform messages.
     @IBOutlet var interval: NSPopUpButton!
     
+    /// Used for selection of tests which can be run on this producer.
+    @IBOutlet var tests: NSPopUpButton!
+    
     /// Used for resetting the producer.
     @IBOutlet var reset: NSButton!
     
@@ -109,6 +112,9 @@ class ProducerController: NSViewController {
     
     /// Used for adding points to this producer.
     @IBOutlet var addPointButton: NSButton!
+    
+    /// Used for running tests on this producer.
+    @IBOutlet var runTestButton: NSButton!
     
     /// The producer view model for this controller.
     let viewModel = ProducerModel()
@@ -131,6 +137,7 @@ class ProducerController: NSViewController {
         // disable buttons
         addPointButton.isEnabled = false
         reset.isEnabled = false
+        runTestButton.isEnabled = false
         
         // configure the collection view
         configureCollectionView()
@@ -226,6 +233,13 @@ class ProducerController: NSViewController {
         
         // select the default interval
         interval.selectItem(at: 50-1)
+        
+        // add titles for producer tests
+        tests.removeAllItems()
+        tests.addItems(withTitles: ["Reset Transform Folio Numbers"])
+        
+        // select the first test
+        tests.selectItem(at: 0)
         
     }
     
@@ -398,6 +412,7 @@ class ProducerController: NSViewController {
             self.interval.isEnabled = false
             self.addPointButton.isEnabled = true
             self.reset.isEnabled = true
+            self.runTestButton.isEnabled = true
             
         }
 
@@ -423,6 +438,7 @@ class ProducerController: NSViewController {
         self.interval.isEnabled = true
         self.addPointButton.isEnabled = false
         self.reset.isEnabled = false
+        self.runTestButton.isEnabled = false
         
         // update the button title
         startStopButton.title = "Start"
@@ -484,6 +500,22 @@ class ProducerController: NSViewController {
         // update the interface name as selected
         viewModel.interfaceName = shortTitle
         
+    }
+    
+    /**
+     Runs the selected test.
+     
+     - Parameters:
+        - sender: The button sending this action.
+     
+     */
+    @IBAction func runTest(_ sender: NSButton) {
+        switch tests.indexOfSelectedItem {
+        case 0:
+            viewModel.resetTransformFolioNumbers()
+        default:
+            break
+        }
     }
     
 }

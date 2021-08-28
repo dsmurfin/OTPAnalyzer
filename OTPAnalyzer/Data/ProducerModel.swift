@@ -269,6 +269,15 @@ class ProducerModel {
     }
     
     /**
+     Resets all transform folio numbers.
+     */
+    func resetTransformFolioNumbers() {
+        Self.queue.sync(flags: .barrier) {
+            self.producer?.testOnlyResetTransformFolioNumbers()
+        }
+    }
+    
+    /**
      Updates the name of the producer.
      
      - Parameters:

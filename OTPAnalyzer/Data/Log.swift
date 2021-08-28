@@ -33,7 +33,7 @@ import Cocoa
 
 */
 
-protocol LogDelegate: class {
+protocol LogDelegate: AnyObject {
     
     /**
      Called when a new log message has been received.
